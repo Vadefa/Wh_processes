@@ -1,0 +1,23 @@
+const Router = require('express')
+const router = new Router()
+const categoryRouter = require('./categoryRouter')
+const goodRouter = require('./goodRouter')
+const logRouter = require('./logRouter')
+const modelRouter = require('./modelRouter')
+const rackRouter = require('./rackRouter')
+const shelfRouter = require('./shelfRouter')
+const storageRouter = require('./storageRouter')
+const userRouter = require('./userRouter')
+const sizeRouter = require('./sizeRouter')
+
+router.use('/category', categoryRouter)
+router.use('/good', goodRouter)
+router.use('/log', logRouter)
+router.use('/model', modelRouter)
+router.use('/rack', rackRouter)
+router.use('/size', sizeRouter)
+router.use('/shelf', shelfRouter)
+router.use('/storage', storageRouter)
+router.use('/user', userRouter)
+
+module.exports = router
